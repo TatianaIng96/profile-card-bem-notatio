@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card__header">
+          <div class="card__header card__header--cover"></div>
+          <img
+            class="card__avatar"
+            src="https://res.cloudinary.com/ddvvitaco/image/upload/c_fill,g_face,h_300,w_300/r_max/cld-sample.jpg"
+            alt="avatar"
+          />
+          <h1 class="card__name">Cristian y Tatiana</h1>
+        </div>
+        <div class="card__star">
+            <input type='radio' hidden name='rate' id='rating-opt5' data-idx='0' class="card__input">
+            <label for='rating-opt5' class="card__label"><span class="card__span"></span></label>
+
+            <input type='radio' hidden name='rate' id='rating-opt4' data-idx='1' class="card__input">
+            <label for='rating-opt4' class="card__label"><span class="card__span"></span></label>
+       
+            <input type='radio' hidden name='rate' id='rating-opt3' data-idx='2' class="card__input">
+            <label for='rating-opt3' class="card__label"><span class="card__span"></span></label>
+       
+            <input type='radio' hidden name='rate' id='rating-opt2' data-idx='3' class="card__input">
+            <label for='rating-opt2' class="card__label"><span class="card__span"></span></label>
+       
+            <input type='radio' hidden name='rate' id='rating-opt1' data-idx='4' class="card__input">
+            <label for='rating-opt1' class="card__label"><span class="card__span"></span></label>
+        </div>
+        <div class="card__main">
+            <p class="card__description"
+            >Global Shaper and Fullstack developer working
+            at Zebra Technologies and Somos Networks I 
+            love mentoring currency working on Make It 
+            Real.
+            </p>
+        </div>
+        <div class="card__buttons">
+            <button class="card__button card__button--inactive">Read More</button>
+            <button class="card__button card__button--contact">Contact</button>
+        </div>
+    </div>
+    
+</body>
+</html>

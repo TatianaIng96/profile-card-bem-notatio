@@ -1,0 +1,227 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: purple;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  background-image: purple;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* //  BLOCK */
+.card {
+max-width: 400px;
+max-height: 500px;
+margin: auto;
+overflow-y: auto;
+position: relative;
+z-index: 1;
+overflow-x: hidden;
+background-color: rgba(255, 255, 255, 1);
+display: flex;
+flex-direction: column;
+border: 5px solid;
+border-color: purple;
+border-radius: 10px;
+box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+transition: 0.3s;
+}
+/* // Element */
+.card__header {
+  height: 150px;
+  position: relative;
+  display: flex;
+  height: 100px;
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+
+/* //  Modifier */
+.card__header--cover {
+  position: absolute;
+  height: 100px;
+  top: -20%;
+  left: 0;
+  will-change: top;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+/* // Element */
+.card__avatar {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(64px);
+  border: 3px solid purple;
+}
+
+
+/* //Element */
+.card__name {
+  position: absolute;
+  left: 55%;
+  bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(90px) translateX(-60%);
+}
+
+.card__star{
+  display: inline-block;
+  font-size: 0;
+  position: relative;
+  text-transform: capitalize;
+  padding: 0 50px 8%;
+  color: gray;
+  padding-left: 5rem;
+  padding-top: 1.5rem;
+  right: 6rem;
+  top: 5rem;
+}
+
+.card__label {
+  float: right;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  position: center;
+}   
+.card__label::before {
+  content: "\2606";
+  padding-bottom: 8px;
+  display: inline-block;
+  transition: 0.2s;
+} 
+.card__span {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: 0.15s ease-out;
+  pointer-events: none;
+  letter-spacing: -2px;
+  transform: translateY(-50%);
+} 
+.card__label:hover span {
+  opacity: 1;
+  transform: none;
+  letter-spacing: 0;
+}
+
+.card__input:checked ~ .card__label::before {
+  content: "\2605";
+  color: purple;
+  filter: drop-shadow(0 0 4px);
+  transform: rotate(.2turn);
+  transition-delay: calc(0.1 * attr(data-idx integer));
+}
+/* 
+//Element */
+.card__main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  top: 2rem;
+}
+
+/* //Element */
+.card__description {
+  color: #636b6f;
+  font-size: 13.5px;
+  line-height: 150%;
+  font-family: "Padauk", sans-serif;
+  margin: 2rem;
+  top: -2rem;
+}
+
+/* // Element */
+.card__buttons {
+  display: inline-flex;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+}
+.card__button {
+  flex: 1 1 auto;
+  font-size: 13px;
+  padding: 10px 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 
+    repeat(
+      auto-fit,
+      minmax(50px,1fr)
+    );
+  gap: 32px;
+  color: white;
+  transition: 0.3s;
+  font-family: "Padauk", sans-serif;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  align-content: space-between;
+  margin: 2rem;
+}
+  /* Modifier */
+.card__button--inactive{
+  color: purple;
+  background-color: white;
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid;
+  border-color: purple;
+}
+
+.card__button--inactive:hover{
+  color: white;
+  background-color: purple;
+  border-radius: 5px 5px 5px 5px;
+  border: 2px solid;
+  border-color: purple;
+  }
+
+.card__button--contact{
+  background-color: purple;
+  border-radius: 5px 5px 5px 5px;
+  border: 0;
+}
+
+.card__button--contact:hover{
+  color: purple;
+  background-color: white;
+  border-radius: 5px 5px 5px 5px;
+  border: 0;
+  border: 2px solid;
+  border-color: purple;
+}
